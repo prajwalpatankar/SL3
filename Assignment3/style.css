@@ -222,6 +222,11 @@ a:visited {
 /* ----- CONTACT US ----- */
 
 .contact-us-section {
+    background-color: #fafafa;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    border-radius: 20px;
     display: inline-block;
     margin-left: 25%;
     margin-top: 150px;
@@ -235,19 +240,42 @@ label {
     font-family: cursive;
     font-size: 27px; 
     color: #e2b400;
-    justify-content: left;
+    justify-content: right;
 }
 
 input {
-    margin-bottom: 10px;    
-    margin-left: 80px;
+    margin-bottom: 10px;   
+    height: 30px; 
     width: 400px;
     float: right;
-    margin-right: 140px;
+    margin-right: 200px;
+    border-radius: 5px;
 
 }
 
+select {
+    margin-bottom: 10px;   
+    height: 30px; 
+    margin-left: 80px;
+    width: 407px;
+    float: right;
+    margin-right: 200px;
+    border-radius: 5px;
+
+}
+
+
 .btn-submit-form {
     margin-top: 30px;
-    
+    margin-left: 350px;
+    padding: 15px 25px;
+    background-color:#f5c653;
+    border: 0px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.btn-submit-form:hover,
+.btn-submit-form:active {
+    background-color: #e2b400;
 }
