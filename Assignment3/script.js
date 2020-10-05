@@ -11,6 +11,9 @@ function validateForm() {
       return false;     
     }   //first name validation
 
+
+
+
     var lname = document.forms["contact-us-form"]["lastname"].value;
     if (lname == "") {
       alert("Last Name cannot be empty !");
@@ -18,12 +21,29 @@ function validateForm() {
       return false;
     }   //last name validation
 
+
+
+
     var email = document.forms["contact-us-form"]["email"].value;
     if (email == "") {
-      alert("Invalid email !");
+      alert("Please Enter email!");
+      event.preventDefault()
+      return false;
+    }
+    else if(email.includes(".com.com"))
+    {
+      alert("Invalid email ! email cannot contain '.com.com'");
+      event.preventDefault()
+      return false;
+    }
+    else if(email.includes("@.")){
+      alert("'.' is used at the wrong place in '.com' ");
       event.preventDefault()
       return false;
     }   //email validation
+
+
+
 
     var phone = document.getElementById("contact").value;
     if (phone == "") {
@@ -31,12 +51,19 @@ function validateForm() {
       event.preventDefault()
       return false;
     }
-    else if( phone < 7000000000 || (phone > 9999999999 && phone < 70000000000) || phone > 99999999999 ) {
-      console.log("");
-      alert("Invalid contact number !");
+    else if(phone < 1000000000 || phone > 99999999999 ){
+      alert("Invalid contact number! Contact number should of 10 or 11 digits.");
+      event.preventDefault()
+      return false;
+    }
+    else if(phone < 7000000000 || (phone > 9999999999 && phone < 70000000000)){
+      alert("Invalid Contact number! Contact number must start from 7,8 or 9.")
       event.preventDefault()
       return false;
     }   //contact validation   
+
+
+
 
     var address = document.forms["contact-us-form"]["address"].value;
     if (address == "") {
@@ -44,6 +71,9 @@ function validateForm() {
       event.preventDefault()
       return false;
     }   //Address validation
+
+
+
 
     var pcode = document.getElementById("pcode").value;
     if (pcode == "") {
@@ -58,6 +88,10 @@ function validateForm() {
       return false;
     }   //pincode validation   
 
+
+
+
+    console.log(fname,lname,email,phone,address,pcode);
     alert("Your details have been submitted successfully");
     return true;          //if everything is correct
     

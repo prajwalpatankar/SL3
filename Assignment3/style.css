@@ -102,9 +102,8 @@ a:visited {
 }
 .nav li{
     list-style: none;
-    display: inline-block;
-    float: right;
-    
+    float: right; 
+    display: block;
     padding: 20px;
     font-size: 20px;
     font-family: cursive;
@@ -221,6 +220,23 @@ a:visited {
 
 /* ----- CONTACT US ----- */
 
+
+
+.contact-header-text h1{
+    font-family: cursive;
+    text-align: center;
+    font-size: 40px;
+    color: #e2b400;
+}
+
+
+.contact-header-text h3{
+    font-family: cursive;
+    text-align: center;
+    font-size: 27px;
+    color: #888888
+}
+
 .contact-us-section {
     background-color: #fafafa;
     padding-top: 30px;
@@ -229,11 +245,9 @@ a:visited {
     border-radius: 20px;
     display: inline-block;
     margin-left: 25%;
-    margin-top: 150px;
+    margin-top: 20px;
     width: 50%;
     margin-right: 25%;
-
-    
 }
 
 label {
