@@ -279,7 +279,7 @@ select {
 }
 
 
-.btn-submit-form {
+button {
     margin-top: 30px;
     margin-left: 350px;
     padding: 15px 25px;
@@ -289,7 +289,7 @@ select {
     border-radius: 5px;
 }
 
-.btn-submit-form:hover,
-.btn-submit-form:active {
+button:hover,
+button:active {
     background-color: #e2b400;
 }

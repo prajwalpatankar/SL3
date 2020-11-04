@@ -91,8 +91,8 @@ function validateForm() {
 
 
 
-    console.log(fname,lname,email,phone,address,pcode);
-    alert("Your details have been submitted successfully");
-    return true;          //if everything is correct
+    // console.log(fname,lname,email,phone,address,pcode);
+    // alert("Your details have been submitted successfully");
+    // return true;          //if everything is correct
     
 }
