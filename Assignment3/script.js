@@ -4,11 +4,19 @@
 function validateForm() {
     
     var flag=0;
+    var letters = /^[A-Za-z]+$/;
+
     var fname = document.forms["contact-us-form"]["firstname"].value;
     if (fname == "") {
       alert("First Name cannot be empty !");
       event.preventDefault()
       return false;     
+    }
+    else if (!(fname.match(letters)))
+    {
+      alert("First Name can consist only of alphabets !");
+      event.preventDefault()
+      return false;
     }   //first name validation
 
 
@@ -17,6 +25,12 @@ function validateForm() {
     var lname = document.forms["contact-us-form"]["lastname"].value;
     if (lname == "") {
       alert("Last Name cannot be empty !");
+      event.preventDefault()
+      return false;
+    }
+    else if (!(lname.match(letters)))
+    {
+      alert("Last Name can consist only of alphabets !");
       event.preventDefault()
       return false;
     }   //last name validation
@@ -50,6 +64,11 @@ function validateForm() {
       alert("Please Enter Contact Number !");
       event.preventDefault()
       return false;
+    }
+    else if(phone.match(letters)) {
+      alert("Invalid contact number! Contact number should not contain letters !");
+      event.preventDefault()
+      return false;   
     }
     else if(phone < 1000000000 || phone > 99999999999 ){
       alert("Invalid contact number! Contact number should of 10 or 11 digits.");
@@ -91,8 +110,8 @@ function validateForm() {
 
 
 
-    // console.log(fname,lname,email,phone,address,pcode);
-    // alert("Your details have been submitted successfully");
-    // return true;          //if everything is correct
+    //console.log(fname,lname,email,phone,address,pcode);
+    //alert("Your details have been submitted successfully");
+    //return true;          //if everything is correct
     
 }
